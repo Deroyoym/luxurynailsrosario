@@ -789,7 +789,7 @@ details summary::-webkit-details-marker {
   margin-bottom: .75rem;
 }
 
-.press-on__info-card h4 {
+.press-on__info-card h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: var(--fw-regular);

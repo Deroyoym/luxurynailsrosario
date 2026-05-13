@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+
+Sitemap: https://www.luxurynailsrosario.com/sitemap.xml

@@ -784,9 +784,14 @@ details summary::-webkit-details-marker {
 }
 
 .press-on__info-icon {
-  font-size: 1.75rem;
   display: block;
-  margin-bottom: .75rem;
+  margin-bottom: .9rem;
+  color: var(--color-rose);
+}
+
+.press-on__info-icon svg,
+.contact__item-icon svg {
+  display: block;
 }
 
 .press-on__info-card h3 {
@@ -1035,9 +1040,9 @@ details summary::-webkit-details-marker {
 }
 
 .contact__item-icon {
-  font-size: 1.25rem;
   flex-shrink: 0;
-  margin-top: .1rem;
+  margin-top: .2rem;
+  color: var(--color-rose);
 }
 
 .contact__item strong {

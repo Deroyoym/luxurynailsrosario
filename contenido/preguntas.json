@@ -1,0 +1,28 @@
+{
+  "lista": [
+    {
+      "pregunta": "¿Cada cuánto necesito sacar turno?",
+      "respuesta": "Depende de la técnica y de tus cuidados. En servicios seguros se retocan cada 15 a 21 días. Yo te aviso cuándo conviene volver según tu tipo de uñas o estilo de vida, también podés agendar tu próximo turno en el momento de tu servicio."
+    },
+    {
+      "pregunta": "¿Las press on dañan mis uñas naturales?",
+      "respuesta": "No, siempre y cuando las retires correctamente (con agua tibia y aceite, sin forzarlas). Las press on son una de las opciones más amigables para la uña natural."
+    },
+    {
+      "pregunta": "¿En qué se diferencian las press on de las soft gel?",
+      "respuesta": "El soft gel se aplica en el salón, requiere cabina UV y dura más. Las press on son postizas que te ponés sola en casa, sin químicos, ideales para alérgicas, menores o quienes tienen poco tiempo."
+    },
+    {
+      "pregunta": "¿Puedo hacerme uñas si soy alérgica a algún componente del gel o acrílico?",
+      "respuesta": "Sí. Las press on son la alternativa perfecta: no contienen los monómeros que suelen causar alergias. También podemos ver si el semipermanente sobre tu uña natural es una opción para vos."
+    },
+    {
+      "pregunta": "¿Hacen entregas de press on?",
+      "respuesta": "Sí. Realizamos envíos. Consultá disponibilidad y costos por WhatsApp o visitanos en el local."
+    },
+    {
+      "pregunta": "¿Se pueden hacer uñas a menores de edad?",
+      "respuesta": "Para servicios en el salón recomendamos esperar a un mayor desarrollo. Para menores, las press on son la opción más segura y divertida."
+    }
+  ]
+}

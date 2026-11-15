@@ -1,0 +1,23 @@
+{
+  "titulo": "Hola, soy Jaquelina",
+  "imagen": "img/perfil.webp",
+  "imagen_descripcion": "Jaquelina, nail artist",
+  "parrafos": [
+    "Soy nail artist profesional con años de experiencia en el cuidado y embellecimiento de uñas. Mi pasión es hacer que cada clienta se sienta especial y segura con sus manos, porque creo que los pequeños detalles marcan la diferencia.",
+    "En Luxury Nails Rosario trabajo con productos de alta calidad, técnicas actualizadas y un enfoque personalizado: porque no todas las uñas son iguales, y el servicio tampoco debería serlo."
+  ],
+  "cifras": [
+    {
+      "numero": "+300",
+      "etiqueta": "clientas felices"
+    },
+    {
+      "numero": "3+",
+      "etiqueta": "años de experiencia"
+    },
+    {
+      "numero": "100%",
+      "etiqueta": "productos de calidad"
+    }
+  ]
+}

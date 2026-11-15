@@ -1,0 +1,184 @@
+# Panel de contenido de Luxury Nails Rosario (Sveltia CMS)
+# Cada vez que se guarda, se crea un commit en GitHub y Vercel publica el sitio.
+
+backend:
+  name: github
+  repo: Deroyoym/luxurynailsrosario
+  branch: main
+  commit_messages:
+    create: 'Contenido: nuevo {{slug}}'
+    update: 'Contenido: actualizar {{slug}}'
+    delete: 'Contenido: borrar {{slug}}'
+    uploadMedia: 'Contenido: subir foto {{path}}'
+    deleteMedia: 'Contenido: borrar foto {{path}}'
+
+site_url: https://luxurynailsrosario.com
+logo:
+  src: /img/favicon.svg
+
+# Las fotos se guardan junto con las que ya tiene el sitio
+media_folder: img
+public_folder: /img
+
+# Las fotos del celular se achican y se pasan a WebP antes de subirlas
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1600
+          height: 1600
+
+collections:
+  - name: pagina
+    label: Página
+    label_singular: Sección
+    icon: web
+    files:
+      - name: inicio
+        label: Inicio
+        file: contenido/inicio.json
+        icon: home
+        fields:
+          - { name: etiqueta, label: Texto chico de arriba, widget: string }
+          - { name: titulo, label: Título principal, widget: text, hint: 'Un salto de línea acá es un salto de línea en la página.' }
+          - { name: subtitulo, label: Subtítulo, widget: text }
+          - { name: imagen, label: Foto de fondo, widget: image }
+          - { name: imagen_descripcion, label: Descripción de la foto, widget: string, hint: 'Qué se ve en la foto. La usan Google y los lectores de pantalla.' }
+
+      - name: galeria
+        label: Fotos de trabajos
+        file: contenido/galeria.json
+        icon: photo_library
+        fields:
+          - name: fotos
+            label: Fotos del carrusel
+            label_singular: Foto
+            widget: list
+            summary: '{{fields.etiqueta}}'
+            min: 1
+            fields:
+              - { name: imagen, label: Foto, widget: image }
+              - { name: etiqueta, label: Etiqueta, widget: string, hint: 'Lo que aparece escrito sobre la foto. Ej.: Soft Gel' }
+              - { name: descripcion, label: Descripción de la foto, widget: string, required: false, hint: 'Qué se ve en la foto. La usan Google y los lectores de pantalla.' }
+
+      - name: servicios
+        label: Servicios
+        file: contenido/servicios.json
+        icon: spa
+        fields:
+          - { name: intro, label: Texto de introducción, widget: text }
+          - name: lista
+            label: Servicios
+            label_singular: Servicio
+            widget: list
+            summary: '{{fields.titulo}}'
+            fields:
+              - { name: titulo, label: Nombre, widget: string }
+              - { name: descripcion, label: Descripción, widget: text }
+              - { name: recomendado, label: Etiqueta de recomendación, widget: text, required: false, hint: 'Ej.: Para: uñas naturales frágiles' }
+              - { name: no_recomendado, label: Etiqueta de advertencia, widget: text, required: false, hint: 'Ej.: No recomendado: si trabajás con agua constantemente' }
+              - { name: destacado, label: Marcar como "Más pedido", widget: boolean, default: false, required: false }
+
+      - name: press-on
+        label: Press on
+        file: contenido/press-on.json
+        icon: back_hand
+        fields:
+          - { name: intro, label: Texto de introducción, widget: text }
+          - name: productos
+            label: Diseños disponibles
+            label_singular: Diseño
+            widget: list
+            summary: '{{fields.nombre}}'
+            fields:
+              - { name: imagen, label: Foto, widget: image }
+              - { name: nombre, label: Nombre, widget: string, hint: 'El botón Consultar arma el mensaje de WhatsApp con este nombre.' }
+              - { name: descripcion, label: Descripción, widget: text }
+          - name: info
+            label: Tarjetas de información
+            label_singular: Tarjeta
+            widget: list
+            summary: '{{fields.titulo}}'
+            fields:
+              - name: icono
+                label: Ícono
+                widget: select
+                default: flor
+                options:
+                  - { label: Flor, value: flor }
+                  - { label: Personas, value: personas }
+                  - { label: Regla, value: regla }
+                  - { label: Reloj de arena, value: reloj }
+                  - { label: Corazón, value: corazon }
+                  - { label: Estrellas, value: estrellas }
+                  - { label: Caja, value: caja }
+                  - { label: Gota, value: gota }
+                  - { label: Casa, value: casa }
+                  - { label: Regalo, value: regalo }
+              - { name: titulo, label: Título, widget: string }
+              - { name: texto, label: Texto, widget: text }
+          - { name: comparativa_titulo, label: Título de la tabla comparativa, widget: string }
+          - name: comparativa
+            label: Tabla comparativa
+            label_singular: Fila
+            widget: list
+            summary: '{{fields.caracteristica}}'
+            fields:
+              - { name: caracteristica, label: Característica, widget: string }
+              - { name: soft_gel, label: Soft Gel, widget: string }
+              - { name: press_on, label: Press On, widget: string }
+
+      - name: quien-soy
+        label: Quién soy
+        file: contenido/quien-soy.json
+        icon: person
+        fields:
+          - { name: titulo, label: Título, widget: string }
+          - { name: imagen, label: Foto, widget: image }
+          - { name: imagen_descripcion, label: Descripción de la foto, widget: string }
+          - name: parrafos
+            label: Párrafos
+            label_singular: Párrafo
+            widget: list
+            field: { name: parrafo, label: Párrafo, widget: text }
+          - name: cifras
+            label: Cifras
+            label_singular: Cifra
+            widget: list
+            summary: '{{fields.numero}} {{fields.etiqueta}}'
+            required: false
+            fields:
+              - { name: numero, label: Número, widget: string, hint: 'Ej.: +300' }
+              - { name: etiqueta, label: Texto, widget: string, hint: 'Ej.: clientas felices' }
+
+      - name: preguntas
+        label: Preguntas frecuentes
+        file: contenido/preguntas.json
+        icon: help
+        fields:
+          - name: lista
+            label: Preguntas
+            label_singular: Pregunta
+            widget: list
+            summary: '{{fields.pregunta}}'
+            fields:
+              - { name: pregunta, label: Pregunta, widget: string }
+              - { name: respuesta, label: Respuesta, widget: text }
+
+      - name: contacto
+        label: Contacto y horario
+        file: contenido/contacto.json
+        icon: call
+        fields:
+          - { name: texto, label: Texto de introducción, widget: text }
+          - { name: horario, label: Horario, widget: string, hint: 'Ej.: Martes a sábado · Con turno previo' }
+          - { name: direccion_calle, label: Dirección (calle y número), widget: string }
+          - { name: direccion_ciudad, label: Ciudad y provincia, widget: string }
+          - { name: entregas, label: Entregas, widget: string }
+          - { name: whatsapp, label: WhatsApp, widget: string, pattern: ['^[0-9]{10,15}$', 'Solo números, con código de país. Ej.: 5493416106022'], hint: 'Solo números, con código de país y sin el +. Lo usan todos los botones de WhatsApp.' }
+          - { name: instagram, label: Usuario de Instagram, widget: string, hint: 'Sin la @. Ej.: luxurynailrosario' }
+          - { name: tienda_url, label: Link de la tienda online, widget: string }

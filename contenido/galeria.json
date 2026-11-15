@@ -1,0 +1,29 @@
+{
+  "fotos": [
+    {
+      "imagen": "img/soft.webp",
+      "etiqueta": "Soft Gel",
+      "descripcion": "Uñas en soft gel"
+    },
+    {
+      "imagen": "img/kapping.webp",
+      "etiqueta": "Kapping",
+      "descripcion": "Tratamiento de Kapping en uñas"
+    },
+    {
+      "imagen": "img/press.webp",
+      "etiqueta": "Press On",
+      "descripcion": "Uñas postizas press on"
+    },
+    {
+      "imagen": "img/nailart.webp",
+      "etiqueta": "Nail Art",
+      "descripcion": "Diseño artístico en uñas"
+    },
+    {
+      "imagen": "img/semi.webp",
+      "etiqueta": "Semipermanente",
+      "descripcion": "Uñas semipermanente"
+    }
+  ]
+}

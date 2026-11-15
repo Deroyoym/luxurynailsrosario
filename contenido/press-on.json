@@ -1,0 +1,70 @@
+{
+  "intro": "La solución perfecta para quienes no pueden (o no quieren) ir al salón. Uñas de diseño, sin alergia, sin daño, listas para usar.",
+  "info": [
+    {
+      "icono": "flor",
+      "titulo": "¿Qué son?",
+      "texto": "Uñas postizas de alta calidad, diseñadas a mano, que se colocan con adhesivo o pegamento especial. No requieren cabina UV ni químicos."
+    },
+    {
+      "icono": "personas",
+      "titulo": "¿Para quiénes?",
+      "texto": "Para quienes trabajan en entornos donde no se permiten uñas largas o esmalte, para menores de edad, personas con alergia a los geles, o quienes tienen poco tiempo."
+    },
+    {
+      "icono": "regla",
+      "titulo": "¿Cómo se miden?",
+      "texto": "Te enviamos una plantilla de medición por WhatsApp. Medís tus uñas y nos mandás los números. Así el set es a tu medida exacta."
+    },
+    {
+      "icono": "reloj",
+      "titulo": "¿Cuánto duran?",
+      "texto": "Con el cuidado adecuado, entre 1 y 3 semanas. Son reutilizables si las retirás correctamente."
+    }
+  ],
+  "comparativa_titulo": "¿En qué se diferencian el Soft Gel y las Press On?",
+  "comparativa": [
+    {
+      "caracteristica": "Aplicación",
+      "soft_gel": "En el salón con cabina UV",
+      "press_on": "En tu casa, en minutos"
+    },
+    {
+      "caracteristica": "Duración",
+      "soft_gel": "21 días o más",
+      "press_on": "1–3 semanas"
+    },
+    {
+      "caracteristica": "Apta para alérgicas",
+      "soft_gel": "Depende",
+      "press_on": "✓ Sí"
+    },
+    {
+      "caracteristica": "Apta para menores",
+      "soft_gel": "No recomendado",
+      "press_on": "✓ Sí"
+    },
+    {
+      "caracteristica": "Reutilizable",
+      "soft_gel": "No",
+      "press_on": "✓ Sí"
+    }
+  ],
+  "productos": [
+    {
+      "imagen": "img/classic.webp",
+      "nombre": "Set Clásico",
+      "descripcion": "Tono neutro atemporal, ideal para el trabajo o el día a día."
+    },
+    {
+      "imagen": "img/french.webp",
+      "nombre": "Set Francesas",
+      "descripcion": "Puntas en color blanco o perla con acabado mate. Tendencia del momento."
+    },
+    {
+      "imagen": "img/glitter.webp",
+      "nombre": "Set Glitter Rosa",
+      "descripcion": "Brillos delicados para eventos especiales o fiestas."
+    }
+  ]
+}

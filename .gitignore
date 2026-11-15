@@ -2,3 +2,6 @@
 .agents/
 .claude/skills/design-taste-frontend
 skills-lock.json
+
+# Sitio generado por build.mjs
+dist/
